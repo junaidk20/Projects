@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clock </title>
+    <link rel="style.css" href="style.css">
+    <style>
+      body{
+        background-color: rgba(0, 255, 255, 0.19);
+        text-align: center;
+        margin-top: 139px;
+        background: url("https://images.unsplash.com/photo-1707836774792-276b872af1e5?w=1400&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHx0b3BpYy1mZWVkfDF8NnNNVmpUTFNrZVF8fGVufDB8fHx8fA%3D%3D") ;
+        background-size:cover;
+      }
+      h1{
+        margin-bottom: 2px;
+        padding: 10px;
+        background-color: whitesmoke;
+        margin-left: 140px;
+        margin-right: 140px;
+        text-transform: uppercase;
+        background-color: antiquewhite;
+        letter-spacing: 4px;
+      }
+     .box{
+        display: inline-block;
+        background-color: bisque;
+        padding: 20px;
+     }
+     span{
+        font-size: 100px;
+     }
+     p{
+        font-weight: bold;
+        font-size: large;
+        padding: 10px;
+        background-color: beige;
+
+     }
+     #ampm{
+        font-size: 30px;
+        margin-left: 70%;
+        background-color: aquamarine;
+        
+     }
+
+  </style>
+</head>
+<body>
+    <div id="div-container">
+  <h1>digital clock</h1>
+  <div class="box">
+    <span id="hrs">00</span>
+    <p>hours</p>
+  </div>
+  <div class="box">
+    <span id="min">00</span>
+    <p>minutes</p>
+  </div>
+  <div class="box">
+    <span id="sec">00</span>
+     <p>seconds</p>
+  </div>
+  
+     </div>
+     <btn id="ampm">am</btn>
+    <script >
+    let hrs =document.getElementById("hrs")
+    let min=document.getElementById("min")
+    let sec=document.getElementById("sec")
+    let ampm=document.getElementById("ampm")
+  
+    function updateClock() {
+        let h=new Date().getHours()
+        let m=new Date().getMinutes()
+        let s=new Date().getSeconds()
+        let am="am"
+     if (h>12) {
+        h=h-12
+        am="pm"
+     }
+    
+        h=h<10?"0"+h:h;
+        m=m<10?"0"+m:m;
+        s=s<10?"0"+s:s;
+        
+     hrs.innerText=h;
+     min.innerText=m;
+     sec.innerText=s;
+     ampm,(innerText=am);
+     setTimeout(()=>{
+        updateClock()
+     },1000)
+    }
+    updateClock();
+ 
+    </script>
+</body>
+</html>
