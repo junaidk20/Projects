@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    body{
+        background-color: yellow;
+        text-align: center;
+        justify-content: center;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        font-family: cursive;
+        
+    }
+    #container{
+        background-color: aliceblue;
+        padding: 20px;
+        box-shadow: 0 4px 8px;
+        margin: 10px;
+    }
+    .input{
+        display: block;
+        padding: 10px 50px;
+        text-align: center;
+        margin-left: 15px;
+        
+
+    }
+    #submit{
+        width: 80%;
+        font-size: large;
+        margin-top: 6px;
+        text-align: center;
+        cursor: pointer;
+       margin-right: 10px;
+    }
+
+    
+</style>
+</head>
+<body>
+       <div id="container">
+        <h4 class="score" id="score">score:0</h4>
+ <h1 id="question">what 1 is multiply by 1</h1>
+         <input type="text" id="input" class="input" placeholder="enter your answer" autofocus autocomplete="off">
+         <button type="submit" id="submit" class="btn">submit</button>
+       </div>
+       <script src="app.js"></script>
+</body>
+</html>
