@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>real-Time character counter</title>
+    <style>
+      body{
+        background-color: peachpuff;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        height: 100vh;
+      }
+      #container{
+        background-color: beige;
+        color:black;
+        padding: 40px 10px;
+      }
+      #textarea{
+        display: block;
+        margin-left: 70px;
+        margin-right: 30px;
+        font-family: cursive;
+      }
+      p{
+        margin: 50px;
+        display: inline-block;
+      }
+    </style>
+</head>
+<body>
+    <div id="container">
+    <h1 >real-Time character counter</h1>
+    <textarea name="" id="textarea" cols="30" rows="10" placeholder="please write your text here" maxlength="50"></textarea>
+    <p>total characters:
+     <span class="tc" id="tc">0</span>
+    </p>
+    <p>remaining:
+        <span class="tc" id="remaining">50</span>
+
+    </p>
+    </div>
+    <script src="realtime.js"></script>
+    
+</body>
+</html>
